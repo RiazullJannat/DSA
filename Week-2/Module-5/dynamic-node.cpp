@@ -11,11 +11,10 @@ public:
         this->next = NULL;
     }
 };
-
 int main()
 {
-    Node a(10), b(20), c(30), d(40);
-    
-    cout << a.value << endl; // accessing value using nde;
+    Node *head = new Node(10);
+    Node *b = new Node(20);
+    head->next = b;
     return 0;
 }

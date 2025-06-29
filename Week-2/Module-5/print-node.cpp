@@ -22,10 +22,11 @@ int main()
     a->next = b;
     b->next = c;
     c->next = d;
-    while (head != NULL)
+    Node *temp = head;
+    while (temp != NULL)
     {
-        cout << head->value << endl;
-        head = head->next;
+        cout << temp->value << endl;
+        temp = temp->next;
     }
-    return 0;
+
 }

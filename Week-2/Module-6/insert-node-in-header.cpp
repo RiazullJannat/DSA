@@ -18,6 +18,15 @@ void insert_to_head(Node *&head, int val)
     head = newNode;
     return;
 }
+void print_linked_list(Node *&head)
+{
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        cout << temp->value << endl;
+        temp = temp->next;
+    }
+}
 int main()
 {
     Node *head = new Node(10);
@@ -27,11 +36,6 @@ int main()
     a->next = b;
     insert_to_head(head, 100);
     insert_to_head(head, 200);
-    Node *temp = head;
-    while (temp != NULL)
-    {
-        cout << temp->value << endl;
-        temp = temp->next;
-    }
+    print_linked_list(head);
     return 0;
 }

@@ -14,6 +14,10 @@ public:
 void insert_to_tail(Node *&head, int val)
 {
     Node *newNode = new Node(val);
+    if (head == NULL)
+    {
+        head = newNode;
+    }
     Node *temp = head;
     while (temp->next != NULL)
     {

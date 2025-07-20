@@ -18,9 +18,11 @@ class myStack
 public:
     Node *head = NULL;
     Node *tail = NULL;
+    int sz=0;
     void push(int val)
     {
         Node *newNode = new Node(val);
+        sz++;
         if (head == NULL)
         {
             head = newNode;
@@ -37,6 +39,7 @@ public:
         {
             return;
         }
+        sz--;
         if (tail == head)
         {
             head = NULL;
@@ -54,13 +57,6 @@ public:
     }
     int size()
     {
-        int sz = 0;
-        Node *temp = head;
-        while (temp != NULL)
-        {
-            sz++;
-            temp = temp->next;
-        }
         return sz;
     }
     bool empty()

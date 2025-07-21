@@ -70,6 +70,20 @@ public:
 };
 int main()
 {
+    Myqueue r;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        int val;
+        cin >> val;
+        r.push(val);
+    }
+    while (!r.empty())
+    {
+        cout << r.front() << endl;
+        r.pop();
+    }
 
     return 0;
 }

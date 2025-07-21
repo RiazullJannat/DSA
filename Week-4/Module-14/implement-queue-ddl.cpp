@@ -10,7 +10,7 @@ public:
     {
         this->value = val;
         this->next = NULL;
-
+        this->prev = NULL;
     }
 };
 class Myqueue
@@ -30,6 +30,7 @@ public:
             return;
         }
         tail->next = newNode;
+        newNode->prev = tail;
         tail = newNode;
     }
     void pop()
@@ -47,6 +48,7 @@ public:
         }
         Node *delNode = head;
         head = head->next;
+        head->prev = NULL;
         delete delNode;
     }
     int front()

@@ -1,0 +1,4 @@
+ramim <--> 1
+riaz <--> 2
+sakib <--> 3
+tamim <--> 1

@@ -16,6 +16,9 @@ int main()
     {
         cout << *i << endl;
     }
-
+    if (s.count(40))
+        cout << "ache" << endl;
+    else
+        cout << "nai" << endl;
     return 0;
 }
